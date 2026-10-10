@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { FiArrowRight, FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/image/logo-z.png";
+import logo from "/src/assets/image/logo-z.png";
 // id = el id de la sección a la que apunta cada menú
 const links = [
   { label: "INICIO", id: "home" },
