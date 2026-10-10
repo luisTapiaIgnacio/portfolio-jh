@@ -1,10 +1,12 @@
 import { FiArrowRight, FiChevronRight } from "react-icons/fi";
+import proyecto1 from "/src/assets/image/proyecto-1.png";
+import proyecto2 from "/src/assets/image/proyecto-2.jfif";
+import proyecto3 from "/src/assets/image/proyecto-3.jfif";
 
-// Coloca las imágenes en la carpeta public/ con estos nombres
 const projects = [
-  { title: "Bloom & Wild", type: "E-Commerce Website", img: "/src/assets/image/proyecto-1.png" },
-  { title: "Northland Studio", type: "Creative Agency Website", img: "/src/assets/image/proyecto-2.jfif" },
-  { title: "Pure Balance", type: "Wellness Website", img: "/src/assets/image/proyecto-3.jfif" },
+  { title: "Bloom & Wild", type: "E-Commerce Website", img: proyecto1 },
+  { title: "Northland Studio", type: "Creative Agency Website", img: proyecto2 },
+  { title: "Pure Balance", type: "Wellness Website", img: proyecto3 },
 ];
 
 export default function Work() {
