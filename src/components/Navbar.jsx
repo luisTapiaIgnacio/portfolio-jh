@@ -44,7 +44,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
         <a href="#" className="logo">
-          <img src="src/assets/image/logo-z.png" alt="logo" />
+          <img src="./src/assets/image/logo-z.png" alt="logo" />
         </a>
 
         <nav className={`navbar__links ${open ? "navbar__links--open" : ""}`}>
