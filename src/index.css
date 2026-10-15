@@ -1272,16 +1272,16 @@ section { scroll-margin-top: 90px; }
 }
 
 
-
-
 /* ---------- Code cards del Hero ---------- */
 .code-card {
   position: absolute;
   width: 235px;
-  background: #0b1220;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(1, 7, 20, 0.75);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(120, 190, 255, 0.35);
   border-radius: 8px;
-  box-shadow: 0 16px 40px rgba(11, 18, 32, 0.35);
+  box-shadow: 0 16px 40px rgba(3, 8, 20, 0.25), inset 0 1px 0 rgba(37, 30, 68, 0.15);
   font-family: "Fira Code", Consolas, "Courier New", monospace;
   font-size: 0.72rem;
   text-align: left;
@@ -1290,19 +1290,19 @@ section { scroll-margin-top: 90px; }
 
 /* Detrás de la foto */
 .code-card--back { top: 18%; right: -6%; z-index: 0; animation-delay: -2.5s; width: 195px; font-size: 0.6rem; }
-.tk-key { color: #7fdbca; }
 /* Delante de la foto */
 .code-card--front { bottom: 12%; left: -10%; z-index: 2; }
 
-.code-card__bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; color: #c9d3e6; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.code-card__bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; color: #e6eeff; border-bottom: 1px solid rgba(36, 52, 67, 0.2); }
 
 /* Puntito celeste que alumbra */
 .code-card__dot { width: 8px; height: 8px; border-radius: 50%; background: #38c6ff; animation: code-glow 1.6s ease-in-out infinite; }
 
-.code-card__body { margin: 0; padding: 14px; color: #c9d3e6; line-height: 1.7; min-height: 14.5em; white-space: pre; font-family: inherit; }
-.tk-kw { color: #c792ea; }
-.tk-var { color: #82aaff; }
-.tk-str { color: #f78c6c; }
+.code-card__body { margin: 0; padding: 14px; color: #e6eeff; line-height: 1.7; white-space: pre; font-family: inherit; }
+.tk-kw { color: #d6a8ff; }
+.tk-var { color: #9cc4ff; }
+.tk-str { color: #ffa07a; }
+.tk-key { color: #8ff0dc; }
 
 .code-card__cursor { display: inline-block; width: 6px; height: 1em; background: #38c6ff; vertical-align: text-bottom; margin-left: 1px; animation: code-blink 0.9s steps(1) infinite; }
 
@@ -1319,11 +1319,12 @@ section { scroll-margin-top: 90px; }
 }
 
 @media (max-width: 900px) {
-  .code-card { width: 190px; font-size: 0.6rem; }
-  .code-card--back { right: 0; }
+  .code-card { width: 160px; font-size: 0.5rem; }
+  .code-card--back { width: 140px; font-size: 0.45rem; right: 0; }
   .code-card--front { left: 0; }
+  .code-card__bar { padding: 6px 10px; }
+  .code-card__body { padding: 10px; }
 }
-
 
 
 /* ---------- Gráfico de visitantes (About) ---------- */
@@ -1493,3 +1494,31 @@ section { scroll-margin-top: 90px; }
 }
 .scroll-top--show { opacity: 1; visibility: visible; transform: translateY(0); }
 .scroll-top:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(229, 0, 70, 0.4); }
+
+
+/* Evita el scroll horizontal (clip no rompe el navbar fijo) */
+html, body { overflow-x: clip; }
+
+@media (max-width: 900px) {
+  .about__inner > * { min-width: 0; }
+  .about__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat { padding: 18px 12px; gap: 10px; }
+  .stat__icon { width: 40px; height: 40px; font-size: 1.1rem; }
+  .stat strong { font-size: 1.3rem; }
+  .stat p { font-size: 0.78rem; }
+}
+
+@media (max-width: 400px) {
+  .about__stats { grid-template-columns: 1fr; }
+  .stat:nth-child(odd) { border-right: none; }
+  .stat:nth-child(-n + 3) { border-bottom: 1px solid #e3e6ec; }
+}
+
+/* TopBar: correo y teléfono */
+.topbar__contact { display: contents; }
+.topbar__contact a { display: flex; align-items: center; gap: 8px; }
+
+@media (max-width: 900px) {
+  .topbar__contact { display: flex; flex-direction: column; gap: 4px; }
+  .topbar__social { gap: 16px; }
+}
