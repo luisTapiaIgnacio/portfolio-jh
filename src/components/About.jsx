@@ -23,9 +23,14 @@ export default function About() {
 
 En mi tiempo libre, continúo capacitándome, explorando nuevas tecnologías y practicando con inteligencia artificial (IA), porque mi objetivo es ofrecer soluciones de calidad, mantenerme actualizado y convertirme en un profesional competente.
           </p>
-          <a href="#" className="btn btn--blue">
-            Learn More About Me <FiUser />
-          </a>
+          <a
+  href="https://github.com/luisTapiaIgnacio"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn--blue"
+>
+  <FiUser />  Mi Repositorio
+</a>
         </div>
 
         <div>

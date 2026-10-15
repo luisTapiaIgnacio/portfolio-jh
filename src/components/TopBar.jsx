@@ -10,12 +10,13 @@ export default function TopBar() {
         <a href="tel:+51999002030"><FiPhone /> (+51) 999 002 030</a>
         <span><FiClock /> Lunes - Sabado: 9:00 AM - 6:00 PM </span>
         <div className="topbar__social">
-          <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-          <a href="#" aria-label="TikTok"><FaTiktok /></a>
-          <a href="#" aria-label="GitHub"><FaGithub /></a>
-          <a href="#" aria-label="LinkedIn"><FiLinkedin /></a>
+          <a href="https://web.facebook.com/zcorpJh" aria-label="Facebook"><FaFacebookF /></a>
+          <a href="https://www.tiktok.com/@z_corp25" aria-label="TikTok"><FaTiktok /></a>
+          <a href="https://github.com/luisTapiaIgnacio" aria-label="GitHub"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/luistapiaignacio/" aria-label="LinkedIn"><FiLinkedin /></a>
         </div>
       </div>
     </div>
   );
 }
+

@@ -1,12 +1,18 @@
-import { FaWater, FaPaperPlane, FaLeaf, FaMountain, FaSun, FaCubes } from "react-icons/fa";
+import { FaReact, FaPython, FaJava, FaLinux, FaDocker, FaJenkins } from "react-icons/fa";
+import { SiSpringboot, SiTerraform, SiPostgresql, SiRedis, SiDjango } from "react-icons/si";
 
 const brands = [
-  { name: "oceanic", icon: <FaWater /> },
-  { name: "paperplane", icon: <FaPaperPlane /> },
-  { name: "leaf & co.", icon: <FaLeaf /> },
-  { name: "northern", icon: <FaMountain /> },
-  { name: "sundaze", icon: <FaSun /> },
-  { name: "hive digital", icon: <FaCubes /> },
+  { name: "React", icon: <FaReact /> },
+  { name: "Python", icon: <FaPython /> },
+  { name: "Java", icon: <FaJava /> },
+  { name: "Spring Boot", icon: <SiSpringboot /> },
+  { name: "Django", icon: <SiDjango /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
+  { name: "Redis", icon: <SiRedis /> },
+  { name: "Docker", icon: <FaDocker /> },
+  { name: "Linux", icon: <FaLinux /> },
+  { name: "Jenkins", icon: <FaJenkins /> },
+  { name: "Terraform", icon: <SiTerraform /> },
 ];
 
 export default function Brands() {

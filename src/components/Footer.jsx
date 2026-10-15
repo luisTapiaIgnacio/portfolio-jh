@@ -7,11 +7,11 @@ const explore = ["Sobre mi", "Servicios", "Mis proyectos", "Otros servicios", "B
 const resources = ["Backend", "Desarrollo web Tips", "IA-modelos", "Librerias", "Tutorials"];
 
 const socials = [
-  { label: "Facebook", icon: <FaFacebookF />, href: "#" },
-  { label: "Instagram", icon: <FaInstagram />, href: "#" },
-  { label: "GitHub", icon: <FaGithub />, href: "#" },
-  { label: "LinkedIn", icon: <FaLinkedinIn />, href: "#" },
-  { label: "WhatsApp", icon: <FaWhatsapp />, href: "#" },
+  { label: "Facebook", icon: <FaFacebookF />, href: "https://web.facebook.com/zcorpJh" },
+  { label: "Instagram", icon: <FaInstagram />, href: "https://www.instagram.com/zcorp_2026/" },
+  { label: "GitHub", icon: <FaGithub />, href: "https://github.com/luisTapiaIgnacio" },
+  { label: "LinkedIn", icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/luistapiaignacio/" },
+  { label: "WhatsApp", icon: <FaWhatsapp />, href: "https://wa.me/51999002030?text=Hola%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar%20sobre%20un%20proyecto" },
 ];
 
 function Socials() {

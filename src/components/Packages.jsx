@@ -1,49 +1,55 @@
-import { FaPaperPlane, FaStar, FaGem, FaCheck } from "react-icons/fa";
+import { FaCode, FaServer, FaCloud, FaCheck } from "react-icons/fa";
 
-const packages = [
+const specialties = [
   {
-    name: "BASICO",
-    subTitle: "Presencia Digital",
-    price: "$250 +",
-    desc: "Ideal para emprendedores y pequeños negocios que quieren empezar a digitalizarse.",
-    icon: <FaPaperPlane />,
+    name: "FRONTEND",
+    subTitle: "React + Next.js",
+    color: "#1565e6",
+    icon: <FaCode />,
+    desc: "Interfaces modernas, rápidas y responsivas.",
     features: [
-      "Web corporativas",
-      "Langing page",
-      "Web para profesionales",
-      "Formulario y/o reservacion",
+      "React, Next.js y TypeScript",
+      "Tailwind y CSS moderno",
+      "Diseño responsive",
+      "Consumo de APIs REST",
+      "SEO y rendimiento",
+      "Redux y manejo de estado",
+      
     ],
-    popular: false,
   },
   {
-    name: "SISTEMAS A MEDIDA",
-    subTitle: "Soluciones a medida",
-    price: "$500 +",
-    desc: "Para negocios que necesitan controlar mejor sus operaciones y clientes",
-    icon: <FaStar />,
+    name: "BACKEND",
+    subTitle: "Java + Spring",
+    color: "#e50046",
+    icon: <FaServer />,
+    desc: "Desarrollo de APIs y sistemas empresariales robustos.",
+    featured: true,
     features: [
-      "Sistemas de ventas y POS",
-      "Inventario y administración",
-      "Paneles administrativos",
-      "Integración con otros sistemas",
-      "Módulos según las necesidades",
+      "Spring Boot y Security",
+      "Hibernate y PostgreSQL",
+      "Kafka y arquitectura",
+      "Reactiva: Webflux / JPA",
+      "JUnit y Mockito",
+      "Swagger y Postman",
+      
+      "Python y Django",
     ],
-    popular: true,
   },
   {
-    name: "SISTEMAS INTELIGENTES",
-    subTitle: "Automatización e IA",
-    price: "$2200 +",
-    desc: "Tecnología que automatiza tareas, conecta información y ayuda a tomar mejores decisiones",
-    icon: <FaGem />,
+    name: "CLOUD & DEVOPS",
+    subTitle: "Automatización",
+    color: "#1565e6",
+    icon: <FaCloud />,
+    desc: "Despliegue, infraestructura y observabilidad.",
     features: [
-      "Automatización de procesos",
-      "Asistentes virtuales",
-      "E-Commerce",
-      "Análisis y reportes inteligentes",
-      "Integración de APIs",
+      "Linux y Docker",
+      "Jenkins y CI/CD",
+      "Prometheus y Grafana",
+      "Cloud y Terraform",
+      "Logs y monitoreo",
+     
+      
     ],
-    popular: false,
   },
 ];
 
@@ -63,39 +69,31 @@ export default function Packages() {
         </div>
 
         <div className="packages__grid">
-          {packages.map((pkg) => (
+          {specialties.map((s) => (
             <article
-              className={`pkg-card ${pkg.popular ? "pkg-card--popular" : ""}`}
-              key={pkg.name}
+              className={`spec-card ${s.featured ? "spec-card--featured" : ""}`}
+              key={s.name}
+              style={{ "--c": s.color }}
             >
-              {pkg.popular && (
-                <div className="pkg-card__ribbon">MOST POPULAR</div>
-              )}
+              {s.featured && <div className="spec-card__ribbon">MÁS SOLICITADO</div>}
 
-              <div className="pkg-card__head">
+              <div className="spec-card__head">
                 <div>
-                  <h3>{pkg.name}</h3>
-                  {pkg.subTitle && (
-                    <p className="pkg-card__sub">{pkg.subTitle}</p>
-                  )}
+                  <h3>{s.name}</h3>
+                  <p className="spec-card__sub">{s.subTitle}</p>
                 </div>
-                <span className="pkg-card__icon">{pkg.icon}</span>
+                <span className="spec-card__icon">{s.icon}</span>
               </div>
 
-              <p className="pkg-card__price">{pkg.price}</p>
-              <p className="pkg-card__desc">{pkg.desc}</p>
+              <p className="spec-card__desc">{s.desc}</p>
 
               <ul>
-                {pkg.features.map((f) => (
+                {s.features.map((f) => (
                   <li key={f}>
                     <FaCheck /> {f}
                   </li>
                 ))}
               </ul>
-
-              <a href="#contact" className="pkg-card__btn">
-                Contratar paquete
-              </a>
             </article>
           ))}
         </div>

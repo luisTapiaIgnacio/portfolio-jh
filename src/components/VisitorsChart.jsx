@@ -1,13 +1,13 @@
 // Datos de ejemplo: reemplázalos por los reales (ver nota al final del archivo)
 const data = [
-  { month: "Ene", visits: 120 },
-  { month: "Feb", visits: 180 },
-  { month: "Mar", visits: 160 },
-  { month: "Abr", visits: 240 },
-  { month: "May", visits: 310 },
+  { month: "Ene", visits: 10 },
+  { month: "Feb", visits: 80 },
+  { month: "Mar", visits: 60 },
+  { month: "Abr", visits: 40 },
+  { month: "May", visits: 100 },
   { month: "Jun", visits: 290 },
-  { month: "Jul", visits: 380 },
-  { month: "Ago", visits: 450 },
+  { month: "Jul", visits: 200 },
+  { month: "Ago", visits: 350 },
 ];
 
 // Medidas del gráfico (SVG)

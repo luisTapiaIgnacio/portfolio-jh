@@ -65,9 +65,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="#contact" className="btn btn--yellow">
-          Contactame <FiArrowRight />
-        </a>
+       <a
+  href="https://wa.me/51999002030?text=Hola%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar%20sobre%20un%20proyecto"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn--yellow"
+>
+  Contactame <FiArrowRight />
+</a>
 
         <button
           type="button"
